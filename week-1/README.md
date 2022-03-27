@@ -1,10 +1,10 @@
-# Goal
+# 🏆 Local git repository to GitHub
 This week's goal is to get familiar with using various tools to write code as well as manage your code locally with git and remotely with GitHub. 
 
-# Prerequisites
+# ✅ Prerequisites
 I assume you have installed the required tools as specified in the [README.md](../README.md) file
 
-# Let's get started
+# 🤸 Let's get started
 - Open a command prompt or terminal window on your machine 
 - Choose a folder where you would like to keep all your code for reference. Remember this folder as this is going to be the place where most of our code will reside as we work through week on week
 - Create a folder called `tools`
@@ -171,7 +171,7 @@ I assume you have installed the required tools as specified in the [README.md](.
     ```
 -  Why do we need to push our work to GitHub from our local machine? Well if you feel code on your machine can be safely managed forever ⌛ or you could collaborate with multiple other developers working on the same code on you local machine, you don't need GitHub 😄
 
-# Exercise
+# 🤔 Exercise
 Here are 2 exercise for you for the week 
 - The division code can lead to divide by zero error when the denominator is 0. E.g. 1/0 is infinite. How would you handle that in the code and then merge the changes all the way to GitHub.
 - Create one program each of the next 6 days. Choose a name for each file and stor it a separate `{name}.py` file in the week-1 folder. Use the workflow learnt here to push your code to GitHub from local machine. 
