@@ -5,10 +5,10 @@ This program is intended to help students at the beginning of their academic yea
 # Prerequisites
 - Intall [Anaconda](https://www.anaconda.com/products/individual) 3.7 or above
 - Install [git](https://git-scm.com/downloads)
-- Install vscode 
-- Install package manager homebrew (mac) | chocolatey (winodws) 
-- Install GitHub cli
-- Create a GitHub profile
+- Install [vscode](https://code.visualstudio.com/download) 
+- Install package manager [homebrew](https://brew.sh/) (Mac), [chocolatey](https://chocolatey.org/) (Winodws) 
+- Install [GitHub cli](https://cli.github.com/)
+- Create a [GitHub profile](https://github.com/login)
 
 If there are any specific extensions or installs required during the sessions, they will be mentioned in the specific week's documentation
 
