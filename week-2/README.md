@@ -48,108 +48,44 @@ I assume you have completed tasks from week-1
     ```
     1 % 2 = 1
     ```
-- So far our code is in our user branch. We need to commit this change to the user branch before pushing it to GitHub
+- So far our code is in our user branch. We need to commit this change in the user branch before pushing it to GitHub
 
     ```
-    git status
+    git add .
+    git commit -m "Adding modulus function"
     ```
+- You can switch to your master branch at this stage and check for yourself that the changes you committed to the user branch are not present in your local master branch.
     ```
-    No commits yet
+    git switch master
 
-    Untracked files:
-    (use "git add <file>..." to include in what will be committed)
-            week-1/
-
-    nothing added to commit but untracked files present (use "git add" to track)
+    # Switch back to the user branch
+    git switch wayoutisin
     ```
 
-- We can see the folder that we just added, however git is not yet tracking the changes to this folder. So let's ask git to track the changes by using the command below.
-  ```
-  git add .
-  ```
-- This will track all files and folders under the current directory including `week-1` (you can check for yourself executing the `git status` command)
-  ```
-    On branch master
-
-    No commits yet
-
-    Changes to be committed:
-    (use "git rm --cached <file>..." to unstage)
-            new file:   week-1/README.md
-            new file:   week-1/math.py  
-  ```
-- As per the message above 👆, we still need to commit or finalize the changes. So far the changes are only being tracked. In order to commit we execute the following command 
-    ```
-    git commit -m "Initial Commit"
-    ```
-- Here is the output from the command above 👆
-    ```
-    [master (root-commit) 2dab44d] Initial Commit
-    1 file changed, 23 insertions(+)
-    create mode 100644 week-1/math.py
-    ```
-- Note above that we committed or finalized the changes to 1 file `math.py` with 23 lines of code. This is now committed to a local git repository. However we still need to push it to GitHub. Let's try that
-- In order to push our code to GitHub we need to connect to our GitHub account. To do that we would use `GitHub cli` installed earlier. Login to GitHub using the following command 
-
-    ```
-    gh auth login
-    ```
-- This will show a series of inputs that you need to choose from as specified below
-    ```
-    ? What account do you want to log into?  [Use arrows to move, type to filter]
-    > GitHub.com
-    GitHub Enterprise Server
-
-    # Choose GitHub.com
-
-    ? What is your preferred protocol for Git operations?  [Use arrows to move, type to filter]
-    > HTTPS
-    SSH
-
-    # Choose HTTPS
-
-    ? Authenticate Git with your GitHub credentials? (Y/n)
-
-    # Say Y
-
-    How would you like to authenticate GitHub CLI?  [Use arrows to move, type to filter]
-    > Login with a web browser
-    Paste an authentication token
-
-    # Choose Login with a web browser
-
-    ! First copy your one-time code: XXXX-XXXX
-    - Press Enter to open github.com in your browser... 
-
-    # Press "Enter", will open a web browser and ask you to sign in to GitHub. Once singed in you would be asked to enter the code generated in your terminal (XXXX-XXXX). Enter the code to login
-
-    ✓ Authentication complete. Press Enter to continue...
-
-    - gh config set -h github.com git_protocol https
-    ✓ Configured git protocol
-    ✓ Logged in as <<yourgithubhandle>>
-    ```
-- Now that we have a connection with our github.com account, we can create a repository to hold our code. In the simplest form repository is a container to host your code and provide version control features
-    ```
-    gh repo create
-    ```
--  The above command will again give you a series of options as shown below
-    ```
-    ? Repository name tools
-    ? Repository description "Host all the example code samples for student mentoring"
-    ? Visibility Public
-    ? This will add an "origin" git remote to your local repository. Continue? Yes
-    ✓ Created repository wayoutisin/student on GitHub
-    ✓ Added remote https://github.com/wayoutisin/student.git`
-    ```
--  This has now created a repository with the name `tools` under your GitHub.com account. You can verify using the link provided 👆
--  Finally we push our committed code from the local git repository from our machine to GitHub using the following command
+- Finally we push our committed code from the local git repository user branch to GitHub using the following command
     ```
     git push origin head
     ```
--  Why do we need to push our work to GitHub from our local machine? Well if you feel code on your machine can be safely managed forever ⌛ or you could collaborate with multiple other developers working on the same code on you local machine, you don't need GitHub 😄
+- This will create a new branch `wayoutisin/modulus` in GitHub. This is important because your changes are now available for someone to review before it can be merged to master. However we still need to perform a few steps before the code can be merged to master
+- The change would appear on GitHub as below
+    <img src="../img/userbranch.png">
+- Click "Compare & pull request" to create a PR. A PR (pull request) is a way to push a change from your local branch to GitHub maain (master) branch
+    <img src="../img/pullrequest.png">
+- As you can see the code is being moved from the user branch `wayoutisin\modulus` to `master`. We have documented our PR with comments for ease of understanding. Ideally we would also assign reviewers to this PR, who would then review and approve the PR request, however that is an exercise for you to accomplish by next week 😄
+- Once the reviewers have approved the PR request, we can merge the pull request using the "Merge pull request" option
+    <img src="../img/mergepr.png">
 
+- Finally after merging our changes to the main (master) branch in GitHu, we should refresh our local master branch using the command 
+    ``` 
+    git pull origin master
+    ```
+-  Why do we need to review the PR? Well when working in a large team with multiple developers we would like to have a process to ensure only quality code gets into the main branch (master). One way to ensure that is PR.
+-  What do you with the user branch? You can drop 🗑️ the user branch both locally or on GitHub once you have merged your changes to main (master). Also remember when your PR is active you can make multiple changes to your local branch and push it to master. They will all be collected under the active PR you have in GitHub till it is merged to main (master) or closed.
+
+    ```
+    git branch -d wayoutisin/modulus
+    ```
 # 🤔 Exercise
 Here are 2 exercise for you for the week 
-- The division code can lead to divide by zero error when the denominator is 0. E.g. 1/0 is infinite. How would you handle that in the code and then merge the changes all the way to GitHub.
-- Create one program each of the next 6 days. Choose a name for each file and stor it a separate `{name}.py` file in the week-1 folder. Use the workflow learnt here to push your code to GitHub from local machine. 
+- Add a few members to your GitHub repository and assign the PR to them for review before merging to main (master)
+- Create one program each of the next 6 days. Choose a name for each file and stor it a separate `{name}.py` file in the week-2 folder. Use the workflow learnt here to push your code to GitHub from local machine. 
