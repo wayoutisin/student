@@ -1,10 +1,19 @@
-# 🏆 Review a PR
-In the last week's (week-1) exercise we pushed changes from local repository to GitHub. The local repository was name `master` and so was the remote GitHub repository. The `master` branch is your main branch, hence when collaborating on a project with multiple people or experimenting with a new code, you don't want to muddle the main branch. As such this week we will learn how to use user branches for experimenting and then pushing changes to master using `Pull Request` when ready. 
+# 🏆 Review a PR & Ignore unwanted files
+In the last week's (week-12) exercise we pushed changes from local repository to GitHub. The local repository was name `master` and so was the remote GitHub repository. The `master` branch is your main branch, hence when collaborating on a project with multiple people or experimenting with a new code, you don't want to muddle the main branch. As such this week we will learn how to use user branches for experimenting and then pushing changes to master using `Pull Request` when ready. 
+
+We will look at how a PR is reviewed and the changes are merged. In addition we will also take a look at how to ignore files that are temporary in nature.
 
 # ✅ Prerequisites
-I assume you have completed tasks from week-1
+I assume you have completed tasks from week-2
 
 # 🤸 Let's get started
+- Open your https://github.com profile
+- Go to the profile icon and select "Your repositories"
+- Select the repository you would like to work on
+- Select Settings for repo
+- Select Collaborators from the panel
+- Add people
+- They would have received the invitation 
 - Open a command prompt or terminal window on your machine 
 - Go to the `tools` folder
 - You can open `vscode` from the current directory using the command below. The "." here represents the current directory you are in, while ".." represents the parent directory
