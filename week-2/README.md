@@ -17,7 +17,7 @@ I assume you have completed tasks from week-1
     git pull origin master
     ```
     ```
-    From https://github.com/wayoutisin/student
+    From https://github.com/wayoutisin/tools
     * branch            master     -> FETCH_HEAD
     Already up to date.
     ```

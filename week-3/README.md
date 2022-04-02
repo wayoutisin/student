@@ -1,19 +1,23 @@
 # 🏆 Review a PR & Ignore unwanted files
-In the last week's (week-12) exercise we pushed changes from local repository to GitHub. The local repository was name `master` and so was the remote GitHub repository. The `master` branch is your main branch, hence when collaborating on a project with multiple people or experimenting with a new code, you don't want to muddle the main branch. As such this week we will learn how to use user branches for experimenting and then pushing changes to master using `Pull Request` when ready. 
+In the last week's (week-12) exercise we pushed changes from a user branch to GitHub repository. In the process of pushing the changes from user branch to main (master), we would like to ensure that someone can review the code changes and approve or suggests improvements. All of this is handled through Pull Requests. As Pull Request or PR in short is a way to pull changes from one branch to another in this case from user branch to main.  
 
-We will look at how a PR is reviewed and the changes are merged. In addition we will also take a look at how to ignore files that are temporary in nature.
+This week we will look at how a PR is reviewed and the changes are finally merged. In addition we will also take a look at how to ignore files that are temporary in nature and should not be pushed to GitHub.
 
 # ✅ Prerequisites
 I assume you have completed tasks from week-2
 
 # 🤸 Let's get started
-- Open your https://github.com profile
-- Go to the profile icon and select "Your repositories"
-- Select the repository you would like to work on
-- Select Settings for repo
-- Select Collaborators from the panel
-- Add people
-- They would have received the invitation 
+- Open your GitHub profile page at https://github.com
+- On the right hand corner, click on your profile icon.
+- Select the option "Your repositories"
+- Select the repository you would like to work on (`tools`)
+- In the repository page, select "Settings" option
+  <img src="./../img/settings.png">
+- On the left panel choose "Collaborators"
+  <img src="./../img/collaborator.png">
+- Add people you would like to be collaborators in this repository. Use individual GitHub handle to add users to the repository
+    <img src="./../img/adduser.png">
+- Added users would receive an invitation to join the rspository as a collaborator. Once they do, they can start contributing to the respository starting with reviewing the PR(s).They would have received the invitation.
 - Open a command prompt or terminal window on your machine 
 - Go to the `tools` folder
 - You can open `vscode` from the current directory using the command below. The "." here represents the current directory you are in, while ".." represents the parent directory
@@ -26,32 +30,32 @@ I assume you have completed tasks from week-2
     git pull origin master
     ```
     ```
-    From https://github.com/wayoutisin/student
+    From https://github.com/wayoutisin/tools
     * branch            master     -> FETCH_HEAD
     Already up to date.
     ```
 - We can see that our local master branch has all the changes from GitHub.
 - Next we create a user branch from our local master branch
     ```
-    git checkout -b wayoutisin/modulus
+    git checkout -b wayoutisin/week-3
     ```
 - On the prompt you will see the message as 
     ```
-    Switched to a new branch 'wayoutisin/modulus
+    Switched to a new branch 'wayoutisin/week-3
     ```
-- Create a file `modulus.py` under the `week-2` folder and add a simple function to compute the remainder in a division operation
+- Create a file `power.py` under the `week-3` folder and add a simple function to compute the remainder in a division operation
     ```
-    def mod(x, y):
-    return x%y
+    def power(x, y):
+    return x**y
 
     if __name__ == "__main__":
         x = 1
         y = 2
-        print(f"{x} % {y} = {mod(x, y)}")
+        print(f"{x} ^ {y} = {power(x, y)}")
     ```
 -  You can execute the file by starting a Terminal from inside vscode and executing the following command. Please ensure that path to modulus.py is correct.
     ```
-    python week-2/modulus.py
+    python week-3/power.py
     ```
 - A successful execution would show the following results
     ```
